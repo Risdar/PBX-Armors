@@ -1,0 +1,23 @@
+[enu default]
+//////////////////////////// GENERAL ///////////////////////////////////////////////////////////////////////////////
+PBXArmors_Settings     = "\cj⑄\c- PBX - Armors Settings";
+PBXArmors_Version      = "PBX - Armors Version 1.0 Loaded";
+
+//////////////////////////// ARMOR ///////////////////////////////////////////////////////////////////////////////
+PBXArmors_Red           = "UAC Spec-Ops Armor";
+PBXArmors_Purple        = "QUAD Energy Armor";
+PBXArmors_White         = "UAC Rapid Regeneration Armor";
+PBXArmors_Orange        = "UAC Night Vision Armor";
+PBXArmors_Yellow        = "UAC Assault Armor";
+PBXArmors_Black         = "UAC Commander Armor";
+PBXArmors_Demon         = "Picked up- UHG!, this thing stinks like rotten meat...";
+PBXArmors_Cyan          = "Code in Execution - 12 Seconds until Stop";
+PBXArmors_DarkPurple    = "AGV Resource Duplicator Armor";
+PBXArmors_DarkRed       = "Reactive Armor Plating Equipped";
+PBXArmors_Gold          = "UAC Advanced IA Armor";
+PBXArmors_Gray          = "UAC Prototype Testing Armor: ";
+PBXArmors_LightBlue     = "UAC Hydro Armor";
+PBXArmors_LightGreen    = "Guardian Angel System Installed";
+PBXArmors_Pink          = "UAC Hostile Repulsor Armor";
+
+

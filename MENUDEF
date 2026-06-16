@@ -1,0 +1,93 @@
+
+AddOptionMenu "PB_AddonOptions"
+{
+    Submenu "$PBXArmors_Settings", "PBXArmors_Menu"
+}
+OptionMenu "PBXArmors_Menu"
+{
+    Title "$PBXArmors_Settings"
+	Class "PB_OptionMenu"
+
+    StaticText " "
+    Command "Enable All PBX Armors Spawners", "set PBXArmors_filter 0"
+    /* Command "Reset PBX Armor Tips", "set PBXWeapons_WeaponHelpFlags 0; set PBXWeapons_UpgradeHelpFlags 0" */
+
+    /* StaticText " "
+
+    StaticText "PBX - Armors HUD Settings", grey
+    StaticText " "
+    FlagOption "Weapon HUD",            "PBXWeapons_hudsetting_filter",    "OffOn", 0
+    Slider     "Horizontal (X)",        "PBXWeapons_Weaponhud_x",          -700, 700, 1
+    Slider     "Vertical (Y)",          "PBXWeapons_Weaponhud_y",          -700, 700, 1
+    Slider     "Scale",                 "PBXWeapons_Weaponhud_scale",      0.1, 10, 0.1
+    Slider     "Transparency",	        "PBXWeapons_Weaponhud_alpha",      0, 1, 0.02, 2 */
+    /* StaticText " " */
+    /* Slider     "Scale Cut-Off (X)",     "PBXWeapons_Weaponhud_boxW",       1, 250, 1
+    Slider     "Scale Cut-Off (Y)",     "PBXWeapons_Weaponhud_boxH",       1, 250, 1 */
+    /* StaticText " " */
+    
+    /* StaticText " " */
+    
+    // Reset
+    /* Command "Reset HUD to Default", "resetcvar PBXWeapons_Weaponhud_x; resetcvar PBXWeapons_Weaponhud_y; resetcvar PBXWeapons_Weaponhud_scale; resetcvar PBXWeapons_Weaponhud_alpha; resetcvar PBXWeapons_Weaponhud_boxW; resetcvar PBXWeapons_Weaponhud_boxH; resetcvar PBXWeapons_WeaponModehud_x; resetcvar PBXWeapons_WeaponModehud_y; resetcvar PBXWeapons_WeaponModehud_scale; resetcvar PBXWeapons_WeaponModehud_alpha; resetcvar PBXWeapons_WeaponModehud_boxW; resetcvar PBXWeapons_WeaponModehud_boxH" */
+    
+    StaticText " "
+
+    StaticText "$PBXArmors_Version"
+}
+
+//////////////////////////// GREEN ARMOR SPAWNER ////////////////////////////////////////////////////////////////////////////////////
+// TIER 1
+AddOptionMenu "AddonHealthArmorSpawns" after "GRENT1"
+{
+    FlagOption    "Gray",                              "PBXArmors_filter",    "OffOn", 11
+}
+
+// TIER 2
+AddOptionMenu "AddonHealthArmorSpawns" after "GRENT2"
+{
+    FlagOption    "Yellow","PBXArmors_filter",    "OffOn", 4
+    FlagOption    "Light Blue","PBXArmors_filter",    "OffOn", 12
+}
+
+// TIER 3
+AddOptionMenu "AddonHealthArmorSpawns" after "GRENT3"
+{
+    FlagOption    "Purple","PBXArmors_filter",    "OffOn", 2
+}
+
+// TIER 4
+AddOptionMenu "AddonHealthArmorSpawns" after "GRENT4"
+{
+    FlagOption    "Dark Purple","PBXArmors_filter",    "OffOn", 8
+    FlagOption    "Gold","PBXArmors_filter",    "OffOn", 10
+}
+//////////////////////////// BLUE ARMOR SPAWNER ////////////////////////////////////////////////////////////////////////////////////
+// TIER 1
+AddOptionMenu "AddonHealthArmorSpawns" after "BLUET1"
+{
+    FlagOption    "White","PBXArmors_filter",    "OffOn", 2
+    FlagOption    "Orange","PBXArmors_filter",    "OffOn", 3
+    FlagOption    "Black","PBXArmors_filter",    "OffOn", 5
+}
+
+// TIER 2
+AddOptionMenu "AddonHealthArmorSpawns" after "BLUET2"
+{
+    FlagOption    "Red","PBXArmors_filter",    "OffOn", 0
+    FlagOption    "Pink","PBXArmors_filter",    "OffOn", 14
+}
+
+// TIER 3
+AddOptionMenu "AddonHealthArmorSpawns" after "BLUET3"
+{
+    FlagOption    "Demon","PBXArmors_filter",    "OffOn", 6
+    FlagOption    "Cyan","PBXArmors_filter",    "OffOn", 7
+}
+
+// TIER 4
+AddOptionMenu "AddonHealthArmorSpawns" after "BLUET4"
+{
+    FlagOption    "Dark Red","PBXArmors_filter",    "OffOn", 9
+    FlagOption    "Light Green","PBXArmors_filter",    "OffOn", 13
+}
