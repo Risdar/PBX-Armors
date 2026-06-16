@@ -18,11 +18,6 @@ PB Revamped Mutators made by Kineret.G
 
 The New Armors in this Addon:
 
-
-Green: 100% Durability, 50 Damage Reduction
-
-Blue: 100% Durability, 100 Damage Reduction
-
 Yellow: Haste + RadSuit, 130% Durability, 50 Damage Reduction
 
 Purple: Quad Damage, 140% Durability, 90 Damage Reduction
