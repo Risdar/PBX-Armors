@@ -14,6 +14,8 @@ Code Base in Zdoom DECORATE and Zscript.
 
 PB Revamped Mutators made by Kineret.G
 
+
+// Everything below this are outdated
 -----
 
 The New Armors in this Addon:

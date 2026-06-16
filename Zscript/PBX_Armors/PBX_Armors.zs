@@ -262,7 +262,7 @@ class PBX_DarkPurpleArmor : PBX_ArmorBase
         Armor.SavePercent DPURPLE_PERCENT; 
         Armor.SaveAmount DPURPLE_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_DarkPurple"; 
-        PBX_ArmorBase.ArmorToken 'AmmoRefillerToken';
+        PBX_ArmorBase.ArmorToken 'PBX_PowerInfiniteAmmo';
     }
 
     States 
@@ -274,31 +274,42 @@ class PBX_DarkPurpleArmor : PBX_ArmorBase
     }
 }
 
-class AmmoRefillerToken : Inventory
+class PBX_PowerInfiniteAmmo : PB_PowerupGiver 
 {
-    Default 
-    { 
-        Inventory.MaxAmount 1; 
-    }
-
-    override void DoEffect()
+    Default
     {
-        Super.DoEffect();
-
-        // If there is no armor, destroy
-        if (!Owner || Owner.CountInv("BasicArmor") <= 0 || Owner.CountInv("PBX_DarkPurpleArmor") <= 0) 
-        { 
-            Destroy(); 
-            return; 
-        }
-
-        // Always refill ammo
-        for (Inventory item = Owner.Inv; item != null; item = item.Inv)
-        {
-            if (item is 'Ammo') item.Amount = item.MaxAmount;
-        }
+        Powerup.Type "PowerInfiniteAmmo";
+        Powerup.Duration INFAMMO_DURATION;
+        Inventory.MaxAmount 0;
     }
 }
+
+// Unused
+// class AmmoRefillerToken : Inventory
+// {
+//     Default 
+//     { 
+//         Inventory.MaxAmount 1; 
+//     }
+
+//     override void DoEffect()
+//     {
+//         Super.DoEffect();
+
+//         // If there is no armor, destroy
+//         if (!Owner || Owner.CountInv("BasicArmor") <= 0 || Owner.CountInv("PBX_DarkPurpleArmor") <= 0) 
+//         { 
+//             Destroy(); 
+//             return; 
+//         }
+
+//         // Always refill ammo
+//         for (Inventory item = Owner.Inv; item != null; item = item.Inv)
+//         {
+//             if (item is 'Ammo') item.Amount = item.MaxAmount;
+//         }
+//     }
+// }
 
 //////////////////////////// DARK RED ////////////////////////////////////////////////////////////////////////////////////
 class PBX_DarkRedArmor : PBX_ArmorBase
