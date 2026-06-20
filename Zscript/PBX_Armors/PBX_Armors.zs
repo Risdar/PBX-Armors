@@ -6,6 +6,7 @@ class PBX_RedArmor : PBX_ArmorBase
         Armor.SavePercent RED_PERCENT; 
         Armor.SaveAmount RED_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Red"; 
+        Inventory.AltHudIcon "ARM3A0";
         PBX_ArmorBase.ArmorToken 'PB_Berserk';
     }
 
@@ -27,6 +28,7 @@ class PBX_PurpleArmor : PBX_ArmorBase
         Armor.SavePercent PURPLE_PERCENT; 
         Armor.SaveAmount PURPLE_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Purple"; 
+        Inventory.AltHudIcon "ARM6A0";
         PBX_ArmorBase.ArmorToken 'PB_Doomsphere';
     }
 
@@ -48,6 +50,7 @@ class PBX_WhiteArmor : PBX_ArmorBase
         Armor.SavePercent WHITE_PERCENT; 
         Armor.SaveAmount WHITE_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_White"; 
+        Inventory.AltHudIcon "ARM4A0";
         PBX_ArmorBase.ArmorToken 'PBX_PowerRegeneration';
     }
 
@@ -80,6 +83,7 @@ class PBX_OrangeArmor : PBX_ArmorBase
         Armor.SavePercent ORANGE_PERCENT; 
         Armor.SaveAmount ORANGE_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Orange"; 
+        Inventory.AltHudIcon "ARM7A0";
         PBX_ArmorBase.ArmorToken 'PB_Infrared';
     }
 
@@ -101,12 +105,13 @@ class PBX_YellowArmor : PBX_ArmorBase
         Armor.SavePercent YELLOW_PERCENT; 
         Armor.SaveAmount YELLOW_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Yellow"; 
+        Inventory.AltHudIcon "ARM5A0";
     }
 
     States 
     { 
         Spawn:
-            ARM5 a 1 Bright;
+            ARM5 A 1 Bright;
 		    ARM5 A 2 Bright A_SpawnItem("YellowFlareMedium",0,10);
             Loop; 
     }
@@ -131,6 +136,7 @@ class PBX_BlackArmor : PBX_ArmorBase
         Armor.SavePercent BLACK_PERCENT; 
         Armor.SaveAmount BLACK_AMOUNT; 
         Inventory.Pickupmessage "$PBXArmors_Black";
+        Inventory.AltHudIcon "ARM8A0";
     }
 
     States 
@@ -170,6 +176,7 @@ class PBX_DemonArmor : PBX_ArmorBase
         Armor.SavePercent DEMON_PERCENT; 
         Armor.SaveAmount DEMON_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Demon"; 
+        Inventory.AltHudIcon "ARM9A0";
         PBX_ArmorBase.ArmorToken 'RepulsorToken';
     }
 
@@ -215,6 +222,7 @@ class PBX_CyanArmor : PBX_ArmorBase
         Armor.SavePercent CYAN_PERCENT; 
         Armor.SaveAmount CYAN_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Cyan"; 
+        Inventory.AltHudIcon "BRM1A0";
     }
 
     States 
@@ -262,6 +270,7 @@ class PBX_DarkPurpleArmor : PBX_ArmorBase
         Armor.SavePercent DPURPLE_PERCENT; 
         Armor.SaveAmount DPURPLE_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_DarkPurple"; 
+        Inventory.AltHudIcon "BRM4A0";
         PBX_ArmorBase.ArmorToken 'PBX_PowerInfiniteAmmo';
     }
 
@@ -319,6 +328,7 @@ class PBX_DarkRedArmor : PBX_ArmorBase
         Armor.SavePercent DRED_PERCENT; 
         Armor.SaveAmount DRED_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_DarkRed"; 
+        Inventory.AltHudIcon "BRM7A0";
         PBX_ArmorBase.ArmorToken 'ReactiveArmorToken';
     }
 
@@ -407,6 +417,7 @@ class PBX_GoldArmor : PBX_ArmorBase
         Armor.SavePercent GOLD_PERCENT;
         Armor.SaveAmount GOLD_AMOUNT;
         Inventory.PickupMessage "$PBXArmors_Gold";
+        Inventory.AltHudIcon "BRM2A0";
         PBX_ArmorBase.ArmorToken 'MagneticToken';
     }
 
@@ -462,6 +473,11 @@ class MagneticToken : Inventory
 //////////////////////////// GRAY ////////////////////////////////////////////////////////////////////////////////////
 class PBX_GrayArmor : PBX_ArmorBase
 {
+    Default
+    {
+        Inventory.AltHudIcon "DUMYA0";
+    }
+
     States 
     { 
         Spawn:
@@ -500,6 +516,7 @@ class PBX_LightBlueArmor : PBX_ArmorBase
         Armor.SavePercent LBLUE_PERCENT; 
         Armor.SaveAmount LBLUE_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_LightBlue"; 
+        Inventory.AltHudIcon "BRM3A0";
         PBX_ArmorBase.ArmorToken 'AquaticToken';
     }
 
@@ -559,6 +576,7 @@ class PBX_LightGreenArmor : PBX_ArmorBase
         Armor.SavePercent LGREEN_PERCENT; 
         Armor.SaveAmount LGREEN_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_LightGreen"; 
+        Inventory.AltHudIcon "BRM6A0";
         PBX_ArmorBase.ArmorToken 'SecondChanceToken';
     }
 
@@ -614,6 +632,7 @@ class PBX_PinkArmor : PBX_ArmorBase
         Armor.SavePercent PINK_PERCENT; 
         Armor.SaveAmount PINK_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Pink"; 
+        Inventory.AltHudIcon "BRM5A0";
         PBX_ArmorBase.ArmorToken 'RepulsorToken';
     }
 
