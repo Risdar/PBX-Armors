@@ -17,7 +17,7 @@ OptionMenu "PBXArmors_Menu"
 
     
     StaticText " "
-    StaticText "$PBXArmors_Version"
+    StaticText "$PBXArmors_Version",green
 }
 
 //////////////////////////// GREEN ARMOR SPAWNER ////////////////////////////////////////////////////////////////////////////////////
