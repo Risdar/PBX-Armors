@@ -51,7 +51,7 @@ class PBX_WhiteArmor : PBX_ArmorBase
         Armor.SaveAmount WHITE_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_White"; 
         Inventory.AltHudIcon "ARM4A0";
-        PBX_ArmorBase.ArmorToken 'PBX_PowerRegeneration';
+        PBX_ArmorBase.ArmorToken 'PBXArmors_Regeneration';
     }
 
     States 
@@ -64,14 +64,12 @@ class PBX_WhiteArmor : PBX_ArmorBase
 
 }
 
-class PBX_PowerRegeneration : PB_PowerupGiver 
+class PBXArmors_Regeneration : PBX_RegenerationGiver 
 {
     Default
     {
-        Powerup.Type "PowerRegeneration";
         Powerup.Duration REGEN_DURATION;
         Powerup.Strength REGEN_STRENGTH;
-        Inventory.MaxAmount 0;
     }
 }
 
@@ -195,7 +193,7 @@ class PBX_DemonArmor : PBX_ArmorBase
         bool pickup = Super.TryPickup(toucher);
         if (pickup)
         {
-            toucher.A_GiveInventory("PBX_PowerFrightener", 1);
+            toucher.A_GiveInventory("PBXArmors_Frightener", 1);
             toucher.A_GiveInventory("PB_Berserk", 1);
             toucher.A_GiveInventory("PB_Doomsphere", 1);
         }
@@ -203,7 +201,7 @@ class PBX_DemonArmor : PBX_ArmorBase
     }
 }
 
-class PBX_PowerFrightener : PB_PowerupGiver 
+class PBXArmors_Frightener : PBX_FrightenerGiver 
 {
     Default
     {
@@ -237,24 +235,23 @@ class PBX_CyanArmor : PBX_ArmorBase
         bool pickup = Super.TryPickup(toucher);
         if (pickup)
         {
-            toucher.A_GiveInventory("PBX_PowerTimeFreezer", 1);
-            toucher.A_GiveInventory("PBX_PowerSpeed", 1);   // Modified haste to have a shorter duration
+            toucher.A_GiveInventory("PBXArmors_TimeFreezer", 1);
+            toucher.A_GiveInventory("PBXArmors_Speed", 1);   // Modified haste to have a shorter duration
         }
         return pickup;
     }
 }
 
-class PBX_PowerTimeFreezer : PB_PowerupGiver 
+class PBXArmors_TimeFreezer : PBX_TimeFreezeGiver 
 {
     Default
     {
-        Powerup.Type "PowerTimeFreezer";
+        Powerup.Duration TIMEFREEZE_DURATION;
         Powerup.Color "GoldMap";
-        Inventory.MaxAmount 0;
     }
 }
 
-class PBX_PowerSpeed : PB_PowerSpeed 
+class PBXArmors_Speed : PB_HasteGiver 
 {
     Default
     {
@@ -271,7 +268,7 @@ class PBX_DarkPurpleArmor : PBX_ArmorBase
         Armor.SaveAmount DPURPLE_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_DarkPurple"; 
         Inventory.AltHudIcon "BRM4A0";
-        PBX_ArmorBase.ArmorToken 'PBX_PowerInfiniteAmmo';
+        PBX_ArmorBase.ArmorToken 'PBXArmors_InfiniteAmmo';
     }
 
     States 
@@ -283,13 +280,11 @@ class PBX_DarkPurpleArmor : PBX_ArmorBase
     }
 }
 
-class PBX_PowerInfiniteAmmo : PB_PowerupGiver 
+class PBXArmors_InfiniteAmmo : PBX_InfiniteAmmoGiver 
 {
     Default
     {
-        Powerup.Type "PowerInfiniteAmmo";
         Powerup.Duration INFAMMO_DURATION;
-        Inventory.MaxAmount 0;
     }
 }
 

@@ -26,12 +26,12 @@ enum PBXArmors_ArmorValues
 
     CYAN_PERCENT            = 100,
     CYAN_AMOUNT             = 40,
+    TIMEFREEZE_DURATION     = -12, // Negative value means seconds instead of tic
     DOUBLESPEED_DURATION    = -12, // Negative value means seconds instead of tic
 
     DPURPLE_PERCENT         = 20,
     DPURPLE_AMOUNT          = 100,
     INFAMMO_DURATION        = -12, // Negative value means seconds instead of tic
-    
 
     DRED_PERCENT            = 100,
     DRED_AMOUNT             = 200,
@@ -56,7 +56,7 @@ enum PBXArmors_ArmorValues
     GUARDIAN_AMOUNT         = 200,
 
     PINK_PERCENT            = 100,
-    PINK_AMOUNT             = 200,
+    PINK_AMOUNT             = 200
 
     
 }
