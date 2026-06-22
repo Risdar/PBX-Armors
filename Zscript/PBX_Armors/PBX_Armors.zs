@@ -205,8 +205,6 @@ class PBXArmors_Frightener : PBX_FrightenerGiver
 {
     Default
     {
-        Powerup.Type "PowerFrightener";
-        Powerup.Color "Black", 0.2;
         Powerup.Duration FRIGHTENER_DURATION;
     }
 }
