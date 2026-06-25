@@ -664,7 +664,11 @@ class EnemyStunDebuff : Inventory
         if (timer % 15 == 0) Owner.SetStateLabel("Pain");
 
         // Slow them down
-        Owner.Vel.X *= 0.8; Owner.Vel.Y *= 0.8;
+        if(owner.vel.x != 0)
+            Owner.Vel.X *= 0.8; 
+        
+        if(owner.vel.y != 0)
+            Owner.Vel.Y *= 0.8;
 
         // Decrease the timer
         timer--;
