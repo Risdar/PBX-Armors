@@ -443,20 +443,21 @@ class MagneticToken : Inventory
         {
             Actor obj = it.thing;
             if (!obj || obj == Owner || !obj.bSPECIAL) continue;
-            bool shouldPickup = (
-                 obj is 'PB_HealthBonus')   || 
-                (obj is 'PB_ArmorBonus')    || 
-                (obj is 'PB_Backpack')      || 
-                (obj is 'PB_WeaponBase')    || 
-                (obj is 'PB_UpgradeItem')   || 
-                (obj is 'Ammo'
-            );
+            bool shouldPickup =
+                ((obj is 'PB_HealthBonus')   || 
+                (obj is 'PB_ArmorBonus')     || 
+                (obj is 'PB_Backpack')       || 
+                (obj is 'PB_WeaponBase')     || 
+                (obj is 'PB_UpgradeItem')    || 
+                (obj is 'Ammo'))             &&
+                !(obj is 'ThrownAxe')
+                ;
             
             if (shouldPickup && Owner.Distance3D(obj) <= pickupRadius)
             {
-                Vector3 direccion = obj.Vec3To(Owner);
-                direccion = direccion.Unit();
-                obj.Vel = direccion * 10;
+                Vector3 direction = obj.Vec3To(Owner);
+                direction = direction.Unit();
+                obj.Vel = direction * 10;
                 obj.bNoFriction = true;
             }
         }
