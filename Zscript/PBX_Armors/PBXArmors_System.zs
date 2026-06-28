@@ -77,30 +77,3 @@ class PBXArmors_Handler : EventHandler
     }
 
 }
-
-class PBX_ArmorBase : PB_Armor
-{
-    name armortoken;
-    property ArmorToken : armortoken;
-
-    Default
-    {
-        PBX_ArmorBase.ArmorToken '';
-        Inventory.PickupSound "ARMOR"; 
-        Scale 0.2; 
-    }
-
-    override bool TryPickup(in out Actor toucher)
-    {
-        bool pickup = Super.TryPickup(toucher);
-        if (pickup && armortoken != '')
-            toucher.GiveInventory(armortoken, 1);
-        return pickup;
-    }
-
-    override string PickupMessage()
-    {
-        return String.Format("%s \n(+%d%% Protection/%d Amount)", StringTable.Localize(pickupMsg),self.SavePercent,self.SaveAmount);
-    }
-
-}
