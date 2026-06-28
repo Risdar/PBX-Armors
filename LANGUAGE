@@ -1,12 +1,12 @@
 [enu default]
 //////////////////////////// GENERAL ///////////////////////////////////////////////////////////////////////////////
-PBXArmors_Settings     = "\cj⑄\c- PBX - Armors Settings";
-PBXArmors_Version      = "\cdPBX - Armors Version: 1.1";
+PBXArmors_Settings     = "\cd⑄\c- PBX - Armors Settings";
+PBXArmors_Version      = "\cdPBX - Armors Version: 1.2";
 
 //////////////////////////// ARMOR ///////////////////////////////////////////////////////////////////////////////
 PBXArmors_Red           = "UAC Spec-Ops Armor";
 PBXArmors_Purple        = "QUAD Energy Armor (Quad Damage)";
-PBXArmors_White         = "UAC Advanced Medicine Suit (Regeneration)r";
+PBXArmors_White         = "UAC Advanced Medicine Suit (Regeneration)";
 PBXArmors_Orange        = "UAC Special Recon Armor (Night Vision)";
 PBXArmors_Yellow        = "Hazardous Environment Armor (Hazmat & Speed)";
 PBXArmors_Black         = "UAC Commander Armor (Backpack)";
@@ -19,6 +19,19 @@ PBXArmors_Gray          = "UAC Prototype Testing Armor: \n%d Durability, %d%% Pr
 PBXArmors_LightBlue     = "UAC Hydro Armor";
 PBXArmors_LightGreen    = "Guardian Angel System Installed";
 PBXArmors_Pink          = "UAC Hostile Repulsor Armor";
+
+PBXArmors_Purple_Tag    = "QUAD Energy Armor";
+PBXArmors_White_Tag     = "UAC Advanced Medicine Suit";
+PBXArmors_Orange_Tag    = "UAC Special Recon Armor";
+PBXArmors_Yellow_Tag    = "Hazardous Environment Armor";
+PBXArmors_Black_Tag     = "UAC Commander Armor";
+PBXArmors_Demon_Tag     = "Demonic Armor";
+PBXArmors_Cyan_Tag      = "UAC Experimental Time Dilation Armor";
+PBXArmors_DrkPurple_Tag = "AGV Resource Duplicator Armor";
+PBXArmors_DarkRed_Tag   = "Reactive Armor Plating";
+PBXArmors_Gold_Tag      = "Advanced Magnetic Armor";
+PBXArmors_Gray_Tag      = "UAC Prototype Testing Armor";
+PBXArmors_LGreen_Tag    = "UAC Guardian Angel System";
 
 //////////////////////////// TOOLTIPS ///////////////////////////////////////////////////////////////////////////////
 PBXArmors_Demon_Tip1    = "The Demonic Armor gives Berserk, Quad Damage, and Enemies will run from you.";

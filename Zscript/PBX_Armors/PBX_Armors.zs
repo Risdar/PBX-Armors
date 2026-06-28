@@ -8,6 +8,7 @@ class PBX_RedArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_Red"; 
         Inventory.AltHudIcon "ARM3A0";
         PBXCore_ArmorBase.ArmorToken 'PB_Berserk';
+        Tag "$PBXArmors_Red"; 
     }
 
     States 
@@ -30,6 +31,7 @@ class PBX_PurpleArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_Purple"; 
         Inventory.AltHudIcon "ARM6A0";
         PBXCore_ArmorBase.ArmorToken 'PB_Doomsphere';
+        Tag "$PBXArmors_Purple_Tag"; 
     }
 
     States 
@@ -52,6 +54,7 @@ class PBX_WhiteArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_White"; 
         Inventory.AltHudIcon "ARM4A0";
         PBXCore_ArmorBase.ArmorToken 'PBXArmors_Regeneration';
+        Tag "$PBXArmors_White_Tag"; 
     }
 
     States 
@@ -83,6 +86,7 @@ class PBX_OrangeArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_Orange"; 
         Inventory.AltHudIcon "ARM7A0";
         PBXCore_ArmorBase.ArmorToken 'PB_Infrared';
+        Tag "$PBXArmors_Orange_Tag"; 
     }
 
     States 
@@ -105,6 +109,7 @@ class PBX_YellowArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_Yellow"; 
         Inventory.AltHudIcon "ARM5A0";
         PBXCore_ArmorBase.ArmorToken 'PB_Backpack';
+        Tag "$PBXArmors_Yellow_Tag"; 
     }
 
     States 
@@ -126,6 +131,7 @@ class PBX_BlackArmor : PBXCore_ArmorBase
         Armor.SaveAmount BLACK_AMOUNT; 
         Inventory.Pickupmessage "$PBXArmors_Black";
         Inventory.AltHudIcon "ARM8A0";
+        Tag "$PBXArmors_Black_Tag"; 
     }
 
     States 
@@ -167,6 +173,7 @@ class PBX_DemonArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_Demon"; 
         Inventory.AltHudIcon "ARM9A0";
         PBXCore_ArmorBase.ArmorToken 'RepulsorToken';
+        Tag "$PBXArmors_Demon_Tag"; 
     }
 
     States 
@@ -213,6 +220,7 @@ class PBX_CyanArmor : PBXCore_ArmorBase
         Armor.SaveAmount CYAN_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Cyan"; 
         Inventory.AltHudIcon "BRM1A0";
+        Tag "$PBXArmors_Cyan_Tag"; 
     }
 
     States 
@@ -261,6 +269,7 @@ class PBX_DarkPurpleArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_DarkPurple"; 
         Inventory.AltHudIcon "BRM4A0";
         PBXCore_ArmorBase.ArmorToken 'PBXArmors_InfiniteAmmo';
+        Tag "$PBXArmors_DrkPurple_Tag"; 
     }
 
     States 
@@ -317,6 +326,7 @@ class PBX_DarkRedArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_DarkRed"; 
         Inventory.AltHudIcon "BRM7A0";
         PBXCore_ArmorBase.ArmorToken 'ReactiveArmorToken';
+        Tag "$PBXArmors_DarkRed_Tag"; 
     }
 
     States 
@@ -406,6 +416,7 @@ class PBX_GoldArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_Gold";
         Inventory.AltHudIcon "BRM2A0";
         PBXCore_ArmorBase.ArmorToken 'MagneticToken';
+        Tag "$PBXArmors_Gold_Tag"; 
     }
 
     States 
@@ -464,6 +475,7 @@ class PBX_GrayArmor : PBXCore_ArmorBase
     Default
     {
         Inventory.AltHudIcon "DUMYA0";
+        Tag "$PBXArmors_Gray_Tag"; 
     }
 
     States 
@@ -512,6 +524,7 @@ class PBX_LightBlueArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_LightBlue"; 
         Inventory.AltHudIcon "BRM3A0";
         PBXCore_ArmorBase.ArmorToken 'AquaticToken';
+        Tag "$PBXArmors_LightBlue"; 
     }
 
     States 
@@ -572,6 +585,7 @@ class PBX_LightGreenArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_LightGreen"; 
         Inventory.AltHudIcon "BRM6A0";
         PBXCore_ArmorBase.ArmorToken 'SecondChanceToken';
+        Tag "$PBXArmors_LGreen_Tag"; 
     }
 
     States 
@@ -627,6 +641,7 @@ class PBX_PinkArmor : PBXCore_ArmorBase
         Inventory.PickupMessage "$PBXArmors_Pink"; 
         Inventory.AltHudIcon "BRM5A0";
         PBXCore_ArmorBase.ArmorToken 'RepulsorToken';
+        Tag "$PBXArmors_Pink"; 
     }
 
     States 
