@@ -3,6 +3,16 @@ AddOptionMenu "PB_AddonOptions"
 {
     Submenu "$PBXArmors_Settings", "PBXArmors_Menu"
 }
+
+AddOptionMenu "PBXCore_Menu"
+{
+    StaticText	"--------- PBX Armors Settings ---------", 1
+    SafeCommand "Enable All PBX Armors Spawners", "set PBXArmors_filter 0"
+    SafeCommand "Reset PBX Armors Tool Tips", "set PBXArmors_HelpFlags 0"
+    StaticText "$PBXArmors_Version",green
+    StaticText " "
+}
+
 OptionMenu "PBXArmors_Menu"
 {
     Title "$PBXArmors_Settings"
@@ -11,6 +21,7 @@ OptionMenu "PBXArmors_Menu"
 
     StaticText	"--------- General Settings ---------", 1
     SafeCommand "Enable All PBX Armors Spawners", "set PBXArmors_filter 0"
+    SafeCommand "Reset PBX Armors Tool Tips", "set PBXArmors_HelpFlags 0"
 
 
     /* Command "Reset PBX Armor Tips", "set PBXWeapons_WeaponHelpFlags 0; set PBXWeapons_UpgradeHelpFlags 0" */

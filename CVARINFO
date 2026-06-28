@@ -1,4 +1,5 @@
 // General
+server int PBXArmors_HelpFlags = 0;
 
 // Spawners
 server int PBXArmors_filter = 0;

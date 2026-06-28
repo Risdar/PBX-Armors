@@ -104,6 +104,7 @@ class PBX_YellowArmor : PBX_ArmorBase
         Armor.SaveAmount YELLOW_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Yellow"; 
         Inventory.AltHudIcon "ARM5A0";
+        PBX_ArmorBase.ArmorToken 'PB_Backpack';
     }
 
     States 
@@ -114,16 +115,6 @@ class PBX_YellowArmor : PBX_ArmorBase
             Loop; 
     }
 
-    override bool TryPickup(in out Actor toucher)
-    {
-        bool pickup = Super.TryPickup(toucher);
-        if (pickup)
-        {
-            toucher.A_GiveInventory("PB_PowerIronFeet", 1);
-            toucher.A_GiveInventory("PB_PowerSpeed", 1);
-        }
-        return pickup;
-    }
 }
 
 //////////////////////////// BLACK ////////////////////////////////////////////////////////////////////////////////////
@@ -193,6 +184,9 @@ class PBX_DemonArmor : PBX_ArmorBase
         bool pickup = Super.TryPickup(toucher);
         if (pickup)
         {
+            // Array<String> tips;
+            // tips.Push("$PBXArmors_Demon_Tip1");
+            // SendTipArrayIfNeeded(tips, PBXArmors_DemonArmorTip);
             toucher.A_GiveInventory("PBXArmors_Frightener", 1);
             toucher.A_GiveInventory("PB_Berserk", 1);
             toucher.A_GiveInventory("PB_Doomsphere", 1);
@@ -482,8 +476,15 @@ class PBX_GrayArmor : PBX_ArmorBase
 
     override bool TryPickup (in out Actor toucher)
     {
-        int rPercent        = Random(1, GRAY_PERCENT);
+        int rPercent        = Random(0,2);
         int rAmount         = Random(1, GRAY_AMOUNT); 
+
+        switch(rPercent)
+        {
+            case 0: rPercent = 33;
+            case 1: rPercent = 50;
+            case 2: rPercent = 70;
+        }
         
         self.SavePercent    = rPercent;
         self.SaveAmount     = rAmount; 
@@ -493,8 +494,7 @@ class PBX_GrayArmor : PBX_ArmorBase
         // Just so it doesnt spam you with the log messages
         if(pickedUp)
         {
-            toucher.A_Log(String.Format("$PBXArmors_Gray"));
-            toucher.A_Log(String.Format("%d Durability, %d%% Protection", rAmount, rPercent));
+            toucher.A_Log(String.Format(StringTable.Localize("$PBXArmors_Gray"),rAmount, rPercent));
         }
         
         return Super.TryPickup(toucher);
@@ -551,7 +551,7 @@ class AquaticToken : Inventory
         }
 
         // Increase speed on water
-        if (Owner.WaterLevel >= 1) 
+        if (Owner.WaterLevel >= 1 && Owner.Speed != 0) 
         {
             Owner.Speed = Owner.Default.Speed * 2.5; 
         }
@@ -608,11 +608,10 @@ class SecondChanceToken : Inventory
 
         if (Owner.Health <= LGREEN_THRESHOLD)
         {
-            Owner.A_SetHealth(200);
+            Owner.A_SetHealth(GUARDIAN_HP);
             Owner.GiveInventory("GuardianEffectArmor", 1);
-            Owner.GiveInventory("InvulnerabilitySphere", 1);
+            Owner.GiveInventory("PB_Invul", 1);
             Owner.A_StartSound("INVUL", CHAN_ITEM, 0, 1.0, ATTN_NONE);
-            Owner.A_SetBlend("Gold", 0.8, 35);
             Destroy();
         }
     }

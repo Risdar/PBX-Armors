@@ -41,8 +41,7 @@ enum PBXArmors_ArmorValues
 
     // Gray Armor values are randomized 
     // between one and this value below
-    GRAY_PERCENT            = 100,
-    GRAY_AMOUNT             = 300,
+    GRAY_AMOUNT             = 150,
 
     LBLUE_PERCENT           = 20,
     LBLUE_AMOUNT            = 200,
@@ -52,13 +51,31 @@ enum PBXArmors_ArmorValues
     LGREEN_PERCENT          = 10,
     LGREEN_AMOUNT           = 10,
     LGREEN_THRESHOLD        = 10,  // Below this value will trigger the life saving effect
+    GUARDIAN_HP             = 200,
     GUARDIAN_PERCENT        = 100,
     GUARDIAN_AMOUNT         = 200,
 
     PINK_PERCENT            = 100,
     PINK_AMOUNT             = 200
 
-    
+}
+
+class PBXArmors_Handler : EventHandler
+{
+
+    Override void PlayerEntered(PlayerEvent e)
+    {
+		// Get player pointer
+        let pm = players[e.PlayerNumber].mo;
+		if(!pm) return;
+
+		// Dont continue if its the titlemap
+        if (level.MapName == "TITLEMAP") return;
+
+		PBXCore_Handler.TryGiveInventory(pm,whatToGive:'PBXArmors_TipsManager', diffCheck:false);
+        return;
+    }
+
 }
 
 class PBX_ArmorBase : PB_Armor
@@ -80,4 +97,10 @@ class PBX_ArmorBase : PB_Armor
             toucher.GiveInventory(armortoken, 1);
         return pickup;
     }
+
+    override string PickupMessage()
+    {
+        return String.Format("%s \n(+%d%% Protection/%d Amount)", StringTable.Localize(pickupMsg),self.SavePercent,self.SaveAmount);
+    }
+
 }

@@ -1,4 +1,4 @@
 Gameinfo
 {
-	/* addeventhandlers = "PBXArmors_Injector" */
+	addeventhandlers = "PBXArmors_Handler"
 }

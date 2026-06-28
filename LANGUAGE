@@ -1,23 +1,38 @@
 [enu default]
 //////////////////////////// GENERAL ///////////////////////////////////////////////////////////////////////////////
 PBXArmors_Settings     = "\cj⑄\c- PBX - Armors Settings";
-PBXArmors_Version      = "PBX - Armors Version: 1.0";
+PBXArmors_Version      = "\cdPBX - Armors Version: 1.1";
 
 //////////////////////////// ARMOR ///////////////////////////////////////////////////////////////////////////////
 PBXArmors_Red           = "UAC Spec-Ops Armor";
-PBXArmors_Purple        = "QUAD Energy Armor";
-PBXArmors_White         = "UAC Rapid Regeneration Armor";
-PBXArmors_Orange        = "UAC Night Vision Armor";
-PBXArmors_Yellow        = "UAC Assault Armor";
-PBXArmors_Black         = "UAC Commander Armor";
+PBXArmors_Purple        = "QUAD Energy Armor (Quad Damage)";
+PBXArmors_White         = "UAC Advanced Medicine Suit (Regeneration)r";
+PBXArmors_Orange        = "UAC Special Recon Armor (Night Vision)";
+PBXArmors_Yellow        = "Hazardous Environment Armor (Hazmat & Speed)";
+PBXArmors_Black         = "UAC Commander Armor (Backpack)";
 PBXArmors_Demon         = "Picked up- UHG!, this thing stinks like rotten meat...";
-PBXArmors_Cyan          = "Code in Execution - 12 Seconds until Stop";
-PBXArmors_DarkPurple    = "AGV Resource Duplicator Armor";
+PBXArmors_Cyan          = "Code in Execution - 12 Seconds until Stop (Time Freeze)";
+PBXArmors_DarkPurple    = "AGV Resource Duplicator Armor (Infinite Ammo)";
 PBXArmors_DarkRed       = "Reactive Armor Plating Equipped";
-PBXArmors_Gold          = "UAC Advanced IA Armor";
-PBXArmors_Gray          = "UAC Prototype Testing Armor: ";
+PBXArmors_Gold          = "Advanced Magnetic Armor (Item Magnet)";
+PBXArmors_Gray          = "UAC Prototype Testing Armor: \n%d Durability, %d%% Protection";
 PBXArmors_LightBlue     = "UAC Hydro Armor";
 PBXArmors_LightGreen    = "Guardian Angel System Installed";
 PBXArmors_Pink          = "UAC Hostile Repulsor Armor";
+
+//////////////////////////// TOOLTIPS ///////////////////////////////////////////////////////////////////////////////
+PBXArmors_Demon_Tip1    = "The Demonic Armor gives Berserk, Quad Damage, and Enemies will run from you.";
+
+PBXArmors_DarkRed_Tip1  = "The Dark Red Armor give you the Reactive Armor Plating ability.";
+PBXArmors_DarkRed_Tip2  = "Any enemies that comes into contact with you will be blasted away.";
+
+PBXArmors_Gray_Tip1     = "The Gray Armor will randomly set your Armor Amount and Save Percent.";
+
+PBXArmors_LBlue_Tip1    = "The Light Blue Armor will give you unlimited oxygen and increase your speed in water.";
+
+PBXArmors_LGreen_Tip1   = "The Light Green Armor will give you a Second Chance when dying.";
+PBXArmors_LGreen_Tip2   = "When you're below %d%% Health the Armor will give you Invulnerability, %d HP, and %d Armor with %d%% Protection.";
+
+PBXArmors_Pink_Tip1     = "The Pink Armor will debuff any enemy that hits you by stunning them and slowing them down.";
 
 
