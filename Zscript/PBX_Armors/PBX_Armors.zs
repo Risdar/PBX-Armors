@@ -455,7 +455,7 @@ class MagneticToken : Inventory
                 (obj is 'PB_WeaponBase')     || 
                 (obj is 'PB_UpgradeItem')    || 
                 (obj is 'Ammo'))             &&
-                !(obj is 'ThrownAxe')
+                !(obj is 'PB_ThrownAxe')
                 ;
             
             if (shouldPickup && Owner.Distance3D(obj) <= pickupRadius)
