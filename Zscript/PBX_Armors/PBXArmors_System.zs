@@ -1,4 +1,4 @@
-enum PBXArmors_ArmorValues
+enum PBXArmors_ArmorValues : int
 {
     RED_PERCENT             = 90,
     RED_AMOUNT              = 160,
