@@ -56,7 +56,9 @@ enum PBXArmors_ArmorValues : int
     GUARDIAN_AMOUNT         = 200,
 
     PINK_PERCENT            = 100,
-    PINK_AMOUNT             = 200
+    PINK_AMOUNT             = 200,
+    STUN_MAXDURATION        = 140,  // How the stun debuff effect lasts  
+    STUN_FREQ               = 15    // How frequent should the debuff happens (in tics)  
 
 }
 

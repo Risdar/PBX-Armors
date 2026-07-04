@@ -48,7 +48,7 @@ AddOptionMenu "AddonHealthArmorSpawns" after "GRENT2"
 // TIER 3
 AddOptionMenu "AddonHealthArmorSpawns" after "GRENT3"
 {
-    FlagOption    "Purple","PBXArmors_filter",    "OffOn", 2
+    FlagOption    "Purple","PBXArmors_filter",    "OffOn", 1
 }
 
 // TIER 4

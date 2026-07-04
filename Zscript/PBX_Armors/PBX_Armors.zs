@@ -131,6 +131,7 @@ class PBX_BlackArmor : PBXCore_ArmorBase
         Armor.SaveAmount BLACK_AMOUNT; 
         Inventory.Pickupmessage "$PBXArmors_Black";
         Inventory.AltHudIcon "ARM8A0";
+        PBXCore_ArmorBase.ArmorToken 'PB_Backpack';
         Tag "$PBXArmors_Black_Tag"; 
     }
 
@@ -142,25 +143,6 @@ class PBX_BlackArmor : PBXCore_ArmorBase
             Loop; 
     }
 
-    override bool TryPickup(in out Actor toucher)
-    {
-        bool pickup = Super.TryPickup(toucher);
-        if (pickup)
-        {
-            toucher.A_GiveInventory("PB_GrenadeAmmo", 20);
-            toucher.A_GiveInventory("PB_StunGrenadeAmmo", 20);
-            toucher.A_GiveInventory("PB_ProxMineAmmo", 20);
-            toucher.A_GiveInventory("PB_QuickLauncherAmmo", 20);
-            toucher.A_GiveInventory("PB_LowCalMag", 20);
-            toucher.A_GiveInventory("PB_HighCalMag", 20);
-            toucher.A_GiveInventory("PB_RocketAmmo", 20);
-            toucher.A_GiveInventory("PB_Cell", 20);
-            toucher.A_GiveInventory("PB_Shell", 20);
-            toucher.A_GiveInventory("PB_Fuel", 20);
-            toucher.A_GiveInventory("PB_DTech", 20);
-        }
-        return pickup;
-    }
 }
 
 //////////////////////////// DEMON ////////////////////////////////////////////////////////////////////////////////////
@@ -172,7 +154,6 @@ class PBX_DemonArmor : PBXCore_ArmorBase
         Armor.SaveAmount DEMON_AMOUNT; 
         Inventory.PickupMessage "$PBXArmors_Demon"; 
         Inventory.AltHudIcon "ARM9A0";
-        PBXCore_ArmorBase.ArmorToken 'RepulsorToken';
         Tag "$PBXArmors_Demon_Tag"; 
     }
 
@@ -666,17 +647,20 @@ class EnemyStunDebuff : Inventory
     override void DoEffect()
     {
         Super.DoEffect();
-        if (!Owner) 
+        if (!Owner || Owner.Health <= 0) 
         { 
             Destroy(); 
             return; 
         }
 
         // Max timer is 140 tic
-        if (timer == 0) timer = 140;
+        if (timer == 0) 
+            timer = STUN_MAXDURATION;
 
-        // Every 15 tic forces the actor to its pain state
-        if (timer % 15 == 0) Owner.SetStateLabel("Pain");
+        // Every STUN_FREQ tic forces the actor to its pain state (Default is 15)
+        let pain = Owner.FindState("Pain");
+        if (pain && timer % STUN_FREQ == 0) // Just in case a monster doesnt have a painstate (which shouldnt be possible lol)
+            Owner.SetState(pain);
 
         // Slow them down
         if(owner.vel.x != 0)
