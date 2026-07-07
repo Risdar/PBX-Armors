@@ -12,6 +12,9 @@ class PBXArmors_TipsManager : PBXCore_TipsManager
 {
 	override bool HandlePickup(Inventory item)
 	{
+        bool returnValue = super.HandlePickup(item);
+        if(!PBXArmors_SendTip) return returnValue;
+
 		string armorHelpCvar = "PBXArmors_HelpFlags";
 
         switch(item.getClassName())
@@ -71,6 +74,6 @@ class PBXArmors_TipsManager : PBXCore_TipsManager
 
         }
 
-		return super.HandlePickup(item);
+		return returnValue;
 	}
 }
