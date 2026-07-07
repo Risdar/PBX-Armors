@@ -7,7 +7,7 @@ AddOptionMenu "PB_AddonOptions"
 AddOptionMenu "PBXCore_Menu"
 {
     StaticText	"--------- PBX Armors Settings ---------", 1
-    Option "Enable Armor Tooltips", "PBXArmors_SendTip", "OnOff"
+    Option "Enable Armor Tooltips", "PBXArmors_SendTip", "OnOff","PBXCore_SendTip"
     SafeCommand "Enable All PBX Armors Spawners", "set PBXArmors_filter 0"
     SafeCommand "Reset PBX Armors Tool Tips", "set PBXArmors_HelpFlags 0"
     StaticText "$PBXArmors_Version",green
@@ -21,7 +21,7 @@ OptionMenu "PBXArmors_Menu"
     Position	-48
 
     StaticText	"--------- General Settings ---------", 1
-    Option "Enable Armor Tooltips", "PBXArmors_SendTip", "OnOff"
+    Option "Enable Armor Tooltips", "PBXArmors_SendTip", "OnOff","PBXCore_SendTip"
     SafeCommand "Enable All PBX Armors Spawners", "set PBXArmors_filter 0"
     SafeCommand "Reset PBX Armors Tool Tips", "set PBXArmors_HelpFlags 0"
 
