@@ -15,7 +15,7 @@ PBXArmors_Cyan          = "Code in Execution - 12 Seconds until Stop (Time Freez
 PBXArmors_DarkPurple    = "AGV Resource Duplicator Armor (Infinite Ammo)";
 PBXArmors_DarkRed       = "Reactive Armor Plating Equipped";
 PBXArmors_Gold          = "Advanced Magnetic Armor (Item Magnet)";
-PBXArmors_Gray          = "UAC Prototype Testing Armor: \n%d Durability, %d%% Protection";
+PBXArmors_Gray          = "UAC Prototype Testing Armor: \n%d Durability, %d Percent Protection";
 PBXArmors_LightBlue     = "UAC Hydro Armor";
 PBXArmors_LightGreen    = "Guardian Angel System Installed";
 PBXArmors_Pink          = "UAC Hostile Repulsor Armor";
@@ -44,7 +44,7 @@ PBXArmors_Gray_Tip1     = "The Gray Armor will randomly set your Armor Amount an
 PBXArmors_LBlue_Tip1    = "The Light Blue Armor will give you unlimited oxygen and increase your speed in water.";
 
 PBXArmors_LGreen_Tip1   = "The Light Green Armor will give you a Second Chance when dying.";
-PBXArmors_LGreen_Tip2   = "When you're below %d%% Health the Armor will give you Invulnerability, %d HP, and %d Armor with %d%% Protection.";
+PBXArmors_LGreen_Tip2   = "When you're below %d Percent Health the Armor will give you Invulnerability, %d HP, and %d Armor with %d Percent Protection.";
 
 PBXArmors_Pink_Tip1     = "The Pink Armor will debuff any enemy that hits you by stunning them and slowing them down.";
 
